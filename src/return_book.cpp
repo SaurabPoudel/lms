@@ -13,20 +13,25 @@
 #define ANSI_COLOR_RED "\x1b[31m"
 #define ANSI_COLOR_RESET "\x1b[0m"
 
-void issueBook_here()
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+
+void returnBookHere()
 {
     int book_id;
 
-    std::cout << "Enter the book id that you want to issue :" << std::endl;
+    std::cout << "Enter the book id that you want to return :" << std::endl;
     std::cin >> book_id;
-    int status = Book::updateBookStatus(book_id, 1);
+    int status = Book::updateBookStatus(book_id, 0);
     if (status == 1)
     {
-        std::cout << "Book with ID " << book_id << " has been issued." << std::endl;
+        std::cout << "Book with ID " << book_id << " has been returned." << std::endl;
     }
     else if (status == 0)
     {
-        std::cout << "Book with ID " << book_id << " is not available." << std::endl;
+        std::cout << "Book with ID " << book_id << " is already returned." << std::endl;
     }
     else
     {
@@ -34,7 +39,7 @@ void issueBook_here()
     }
 }
 
-void User::issueBook()
+void User::returnBook()
 {
     clearScreen();
     std::cout << ANSI_COLOR_GREEN "-----------Library Management System-----------\n";
@@ -70,7 +75,7 @@ void User::issueBook()
     fp.close();
 
     if (flag == 1)
-        issueBook_here();
+        returnBookHere();
     else
         std::cout << "Sorry you're not registered yet:" << std::endl;
 
@@ -81,7 +86,7 @@ void User::issueBook()
 
     if (inputBook == 'Y' || inputBook == 'y')
     {
-        issueBook();
+        returnBook();
     }
     else
     {

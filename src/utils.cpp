@@ -152,9 +152,9 @@ void prompt()
          User::issueBook();
          break;
 
-         // case 4:
-         //   returnBook();
-         //   break;
+      case 4:
+         User::returnBook();
+         break;
 
       case 5:
          Book::searchBook();

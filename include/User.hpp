@@ -18,7 +18,7 @@ public:
   };
   static void addUser(string name, string password);
   static void issueBook();
-  void returnBook(string bookName);
+  static void returnBook();
   static void searchMember();
   static void displayMembers();
 };
