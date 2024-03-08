@@ -1,5 +1,5 @@
+#ifndef User_hpp
 #define User_hpp
-#ifdef User_hpp
 
 #include <string>
 using namespace std;
@@ -13,6 +13,7 @@ private:
 
 public:
   User(string name, string id, string password);
+  void addUser(string name, string password);
   void burrowBook(string bookName);
   void returnBook(string bookName);
   void displayUser();
