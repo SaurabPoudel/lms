@@ -14,7 +14,8 @@ public:
   static void addUser(string name, string password);
   void burrowBook(string bookName);
   void returnBook(string bookName);
-  void displayUser();
+  static void searchMember();
+  static void displayMembers();
 };
 class Librarian : public User
 {

@@ -2,6 +2,7 @@
 
 #include "../include/Auth.hpp"
 #include "../include/Book.hpp"
+#include "../include/User.hpp"
 
 #define ANSI_COLOR_GREEN "\x1b[32m"
 #define ANSI_COLOR_RED "\x1b[31m"
@@ -156,17 +157,17 @@ void prompt()
          Book::searchBook();
          break;
 
-         // case 6:
-         //   searchMember();
-         //   break;
+      case 6:
+         User::searchMember();
+         break;
 
       case 7:
          Book::displayBooks();
          break;
 
-         // case 8:
-         //   displayMembers();
-         //   break;
+      case 8:
+         User::displayMembers();
+         break;
 
       default:
          std::cout << ANSI_COLOR_RED "\nPlease enter valid  key" ANSI_COLOR_RESET;
