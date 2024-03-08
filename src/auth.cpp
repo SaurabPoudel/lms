@@ -73,7 +73,7 @@ void addMemberMenu()
     }
     else
     {
-        User user("", "", "");
+        User user("", "");
         user.addUser(username, password);
     }
 

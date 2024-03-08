@@ -6,21 +6,14 @@
 
 using namespace std;
 
-User::User(string name, string id, string password) {
+User::User(string name, string password)
+{
   this->name = name;
-  this->id = id;
   this->password = password;
 }
 
-void User::displayUser() {
-  cout << "Name: " << name << endl;
-  cout << "ID: " << id << endl;
-  cout << "Password: " << password << endl;
-}
-
-int main() {
-  User user("John Doe", "johndoe", "password");
-  user.displayUser();
+int main()
+{
   clearScreen();
   printBanner();
   pressEnterToContinue();

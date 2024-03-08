@@ -26,7 +26,7 @@ void clearScreen()
 }
 void pressEnterToContinue()
 {
-   std::cout << "Press any Enter to continue . . .";
+   std::cout << "Press Enter to continue . . .";
    std::cin.get();
    return;
 }
