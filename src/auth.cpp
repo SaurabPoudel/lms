@@ -94,22 +94,3 @@ void addMemberMenu()
     }
     std::cout << "\n";
 }
-
-void rot13algorithm(char *pwd)
-{
-    long unsigned int i;
-    for (i = 0; i < strlen(pwd); i++)
-    {
-        if (std::isalpha(pwd[i]))
-        {
-            if ((pwd[i] >= 'a' && pwd[i] <= 'm') || (pwd[i] >= 'A' && pwd[i] <= 'M'))
-            {
-                pwd[i] += ROT;
-            }
-            else
-            {
-                pwd[i] -= ROT;
-            }
-        }
-    }
-}

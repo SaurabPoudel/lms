@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 #include "../include/Auth.hpp"
 #include "../include/Book.hpp"
@@ -14,6 +15,8 @@
 #else
 #include <cstdlib>
 #endif
+
+#define ROT 13
 
 void clearScreen()
 {
@@ -145,9 +148,9 @@ void prompt()
          addMember();
          break;
 
-         // case 3:
-         //   issueBook();
-         //   break;
+      case 3:
+         User::issueBook();
+         break;
 
          // case 4:
          //   returnBook();
@@ -175,4 +178,29 @@ void prompt()
          return;
       }
    }
+}
+void rot13algorithm(char *pwd)
+{
+   long unsigned int i;
+   for (i = 0; i < strlen(pwd); i++)
+   {
+      if (std::isalpha(pwd[i]))
+      {
+         if ((pwd[i] >= 'a' && pwd[i] <= 'm') || (pwd[i] >= 'A' && pwd[i] <= 'M'))
+         {
+            pwd[i] += ROT;
+         }
+         else
+         {
+            pwd[i] -= ROT;
+         }
+      }
+   }
+}
+
+char *stringToChar(const std::string &str)
+{
+   char *cstr = new char[str.length() + 1];
+   std::strcpy(cstr, str.c_str());
+   return cstr;
 }

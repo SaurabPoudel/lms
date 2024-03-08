@@ -11,8 +11,13 @@ private:
   string password;
 
 public:
+  User(string name, string password)
+  {
+    this->name = name;
+    this->password = password;
+  };
   static void addUser(string name, string password);
-  void burrowBook(string bookName);
+  static void issueBook();
   void returnBook(string bookName);
   static void searchMember();
   static void displayMembers();
