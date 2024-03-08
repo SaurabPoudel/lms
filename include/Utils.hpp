@@ -6,4 +6,5 @@ void clearScreen();
 void pressEnterToContinue();
 void menuBar();
 void prompt();
+void replaceSpacesWithDashes(std::string &str);
 #endif

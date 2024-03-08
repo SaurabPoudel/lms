@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "../include/Auth.hpp"
+#include "../include/Book.hpp"
 
 #define ANSI_COLOR_GREEN "\x1b[32m"
 #define ANSI_COLOR_RED "\x1b[31m"
@@ -101,6 +102,17 @@ void menuBar()
              << "{99}-- Exit\n" ANSI_COLOR_RESET << "\n";
 }
 
+void replaceSpacesWithDashes(std::string &str)
+{
+   for (unsigned int i = 0; i < str.length(); i++)
+   {
+      if (str[i] == ' ')
+      {
+         str[i] = '-';
+      }
+   }
+}
+
 void prompt()
 {
    int input;
@@ -118,10 +130,10 @@ void prompt()
          printf(ANSI_COLOR_RED "LMS has been terminated. \n" ANSI_COLOR_RESET);
          exit(0);
 
-         // case 1:
+      case 1:
 
-         //   addBook();
-         //   break;
+         Book::addBook();
+         break;
 
       case 2:
          addMember();
