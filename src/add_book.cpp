@@ -56,7 +56,10 @@ void Book::addBook()
     }
     else
     {
-        std::cout << "Returning to Main Menu..." << std::endl;
+        clearScreen();
+        printBanner();
+        menuBar();
+        prompt();
     }
 }
 

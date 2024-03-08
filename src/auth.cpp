@@ -37,7 +37,7 @@ void User::addUser(std::string name, std::string password)
     std::ofstream file("./data/members.csv", std::ios::app);
     if (file.is_open())
     {
-        file << name << password << "\n";
+        file << name << "," << password << "\n";
         file.close();
         std::cout << ANSI_COLOR_GREEN << "Member added to members.csv file.\n"
                   << ANSI_COLOR_RESET;
