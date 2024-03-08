@@ -9,7 +9,7 @@
 #define ANSI_COLOR_BLUE "\x1b[34m"
 
 #ifdef _WIN32
-#include <windows.h>
+#include <stdlib.h>
 #else
 #include <cstdlib>
 #endif
@@ -18,14 +18,7 @@ void clearScreen()
 {
 #ifdef _WIN32
    // Windows
-   HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-   COORD coord = {0, 0};
-   DWORD count;
-   CONSOLE_SCREEN_BUFFER_INFO csbi;
-   GetConsoleScreenBufferInfo(hStdOut, &csbi);
-   FillConsoleOutputCharacter(hStdOut, ' ', csbi.dwSize.X * csbi.dwSize.Y, coord,
-                              &count);
-   SetConsoleCursorPosition(hStdOut, coord);
+   system("cls");
 #else
    // Unix-like systems
    std::cout << "\033[2J\033[1;1H";
