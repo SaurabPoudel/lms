@@ -14,7 +14,6 @@ private:
     bool isBorrow;
 
 public:
-    // Constructor
     Book(unsigned int id, const std::string &title, const std::string &author, unsigned int year, bool isBorrow)
     {
         this->id = id;
@@ -24,7 +23,6 @@ public:
         this->isBorrow = isBorrow;
     }
 
-    // Member function to add a book
     static void addBook();
     static void searchBook();
     void editBook();

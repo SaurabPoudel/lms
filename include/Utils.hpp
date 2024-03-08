@@ -8,7 +8,7 @@ void menuBar();
 void prompt();
 void rot13algorithm(char *);
 void replaceSpacesWithDashes(std::string &str);
-char *stringToChar(const std::string &str);
+char *stringToCString(const std::string &str);
 void charFiller(std::string &info, int spaces);
 
 #endif
