@@ -11,8 +11,7 @@ private:
   string password;
 
 public:
-  User(string name, string password);
-  void addUser(string name, string password);
+  static void addUser(string name, string password);
   void burrowBook(string bookName);
   void returnBook(string bookName);
   void displayUser();

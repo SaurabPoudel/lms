@@ -105,7 +105,19 @@ void replaceSpacesWithDashes(std::string &str)
       }
    }
 }
+void charFiller(std::string &info, int spaces)
+{
+   int currentLength = info.length();
+   int fillNumber = spaces - currentLength;
 
+   if (fillNumber > 0)
+   {
+      for (int i = 0; i < fillNumber; i++)
+      {
+         info += " ";
+      }
+   }
+}
 void prompt()
 {
    int input;
@@ -140,17 +152,17 @@ void prompt()
          //   returnBook();
          //   break;
 
-         // case 5:
-         //   searchBooks();
-         //   break;
+      case 5:
+         Book::searchBook();
+         break;
 
          // case 6:
          //   searchMember();
          //   break;
 
-         // case 7:
-         //   displayBooks();
-         //   break;
+      case 7:
+         Book::displayBooks();
+         break;
 
          // case 8:
          //   displayMembers();

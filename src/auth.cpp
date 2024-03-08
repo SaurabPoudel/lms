@@ -31,8 +31,8 @@ void addMemberBanner()
 
 void User::addUser(std::string name, std::string password)
 {
-    this->name = name;
-    this->password = password;
+    name = name;
+    password = password;
 
     std::ofstream file("./data/members.csv", std::ios::app);
     if (file.is_open())
@@ -73,8 +73,7 @@ void addMemberMenu()
     }
     else
     {
-        User user("", "");
-        user.addUser(username, password);
+        User::addUser(username, password);
     }
 
     std::cout << ANSI_COLOR_GREEN << "\nEnter [Y] to add new member again OR [N] to go to Main Menu \n> " << ANSI_COLOR_RESET;

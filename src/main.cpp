@@ -6,12 +6,6 @@
 
 using namespace std;
 
-User::User(string name, string password)
-{
-  this->name = name;
-  this->password = password;
-}
-
 int main()
 {
   clearScreen();
