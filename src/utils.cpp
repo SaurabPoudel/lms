@@ -96,6 +96,7 @@ void menuBar()
              << "{6}-- Search Member\n"
              << "{7}-- Display Books\n"
              << "{8}-- Display Members\n"
+             << "{9}-- Edit Profile\n"
              << "{99}-- Exit\n" ANSI_COLOR_RESET << "\n";
 }
 
@@ -170,6 +171,10 @@ void prompt()
 
       case 8:
          User::displayMembers();
+         break;
+
+      case 9:
+         User::editProfile();
          break;
 
       default:

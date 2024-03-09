@@ -21,6 +21,7 @@ public:
   static void returnBook();
   static void searchMember();
   static void displayMembers();
+  static void editProfile();
 };
 class Librarian : public User
 {
