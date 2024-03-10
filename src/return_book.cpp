@@ -65,8 +65,6 @@ void User::returnBook()
         std::istringstream iss(line);
         std::getline(iss, mem.name, ',');
         std::getline(iss, mem.password);
-        cout << mem.name << " " << mem.password << endl;
-        cout << username << " " << password << endl;
         if ((strcmp(stringToCString(mem.name), username) == 0 && strcmp(stringToCString(mem.password), password) == 0))
         {
             flag = 1;

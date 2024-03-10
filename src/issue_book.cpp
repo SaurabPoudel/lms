@@ -60,8 +60,6 @@ void User::issueBook()
         std::istringstream iss(line);
         std::getline(iss, mem.name, ',');
         std::getline(iss, mem.password);
-        cout << mem.name << " " << mem.password << endl;
-        cout << username << " " << password << endl;
         if ((strcmp(stringToCString(mem.name), username) == 0 && strcmp(stringToCString(mem.password), password) == 0))
         {
             flag = 1;
@@ -72,7 +70,7 @@ void User::issueBook()
     if (flag == 1)
         issueBook_here();
     else
-        std::cout << "Sorry you're not registered yet:" << std::endl;
+        std::cout << "Sorry you're not registered yet!" << std::endl;
 
     std::cout << ANSI_COLOR_GREEN "\nEnter [Y] to Continue OR [N] to go to Main Menu \n>" ANSI_COLOR_RESET;
 
