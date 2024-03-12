@@ -80,9 +80,9 @@ void printBanner()
                 "      \\/____/         \n"
              << "                                                               "
                 "                     \n" ANSI_COLOR_RESET
-             << ANSI_COLOR_RED "}-------{+} Developed by  079BEIAB Prajit, "
-                               "Santosh, Sashmin, Saurab {+}-------{\n"
-             << "}--------------------{+} github.com/SaurabPoudel/lms "
+             << ANSI_COLOR_RED "}---------------{+} Developed by  079BEIAB Prajit, "
+                               " Sashmin, Saurab {+}------------{\n"
+             << "}-----------------------{+} github.com/SaurabPoudel/lms "
                 "{+}-----------------------{\n" ANSI_COLOR_RESET;
 }
 void menuBar()

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Library Management System</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="library-management-system">Library Management System</h1>
+<p>The Library Management System is a command-line application that allows managing books in a library. This project is developed in C and provides functionalities to add books, display book details, search for books, and manage borrowing and returning of books. To add features follow the <a href="http://CONTRIBUTING.html">CONTRIBUTING.md</a> file.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>GCC compiler (MinGW for windows users and GCC for Linux users)</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="clone-the-repository">Clone the Repository</h3>
+<ol>
+<li>Open a terminal or command prompt.</li>
+<li>Change the current working directory to the location where you want to clone the project.</li>
+<li>Run the following command to clone the repository:</li>
+</ol>
+<pre><code>git clone https://github.com/SaurabPoudel/lms.git
+</code></pre>
+<h3 id="build">Build</h3>
+<pre><code> make 
+</code></pre>
+<p>windows</p>
+<pre><code>mingw32-make
+</code></pre>
+<h3 id="clean-the-project">Clean the Project</h3>
+<ol>
+<li>Open a terminal or command prompt.</li>
+<li>Change the current working directory to the location where you have cloned the project.</li>
+<li>Run the following command to clean the project:</li>
+</ol>
+<p>Linux User</p>
+<pre><code>make clean
+</code></pre>
+<p>Windows User</p>
+<pre><code>mingw32-make clean
+</code></pre>
+<h3 id="clean-the-data-files">Clean the data files</h3>
+<ol>
+<li>Open a terminal or command prompt.</li>
+<li>Change the current working directory to the location where you have cloned the project.</li>
+<li>Run the following command to clean the data files:</li>
+</ol>
+<p>Linux User</p>
+<pre><code>make cleandatafolder
+</code></pre>
+<p>Windows User</p>
+<pre><code>mingw32-make clean-data-folder
+</code></pre>
+<h3 id="if-you-are-getting-error-like-error-deleting-original-files">If you are getting error like &quot;Error deleting original file&quot;s</h3>
+<ol>
+<li>Open a terminal or command prompt.</li>
+<li>Change the current working directory to the location where you have cloned the project.</li>
+</ol>
+<p>Linux User</p>
+<pre><code>sudo make change-permission
+</code></pre>
+<p>Windows User</p>
+<pre><code>mingw32-make change-permission-win
+
+</code></pre>
+<h2 id="about-the-project">About the Project</h2>
+<h3 id="features">Features</h3>
+<ul>
+<li>Add User</li>
+<li>Edit User Profile</li>
+<li>Add books</li>
+<li>Display book details</li>
+<li>Search for books</li>
+<li>Manage borrowing and returning of books</li>
+</ul>
+
+            
+            
+        </body>
+        </html>

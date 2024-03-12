@@ -23,14 +23,14 @@ public:
   static void displayMembers();
   static void editProfile();
 };
-class Librarian : public User
-{
-public:
-  Librarian(string name, string password);
-  void addBook(string bookName, string author, string genre, string publisher,
-               int year, int copies);
-  void editBook(string bookName, string author, string genre, string publisher,
-                int year, int copies);
-};
+// class Librarian : public User
+// {
+// public:
+//   Librarian(string name, string password);
+//   void addBook(string bookName, string author, string genre, string publisher,
+//                int year, int copies);
+//   void editBook(string bookName, string author, string genre, string publisher,
+//                 int year, int copies);
+// };
 
 #endif

@@ -47,10 +47,11 @@ run: $(EXECUTABLE)
 # Common clean target for all platforms
 clean:
 	$(RM) $(OBJ_DIR) $(BIN_DIR)
-
+clean-data:
+	$(RM) $(DATA_DIR)
 # Additional target for Windows
 ifeq ($(OS),Windows_NT)
-	clean-data-folder:
+	clean-data:
 		$(RM) $(DATA_DIR)
 	change-permission-win:
 		echo F | xcopy /Y >NUL $(DATA_DIR)
